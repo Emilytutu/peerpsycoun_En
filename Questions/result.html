@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <form>
+        <INPUT style="FONT-SIZE: 11pt;   FONT-FAMILY: 微软雅黑" onclick=processForm(this.form) type=button
+            value=查看结果>&nbsp;<br /><br />
+        <INPUT class="output" size="50" name=answer> <BR><BR>
+        <INPUT class="output" size="50" name=answer2><br />
+    </form>
+    <br>
+
+    <script language=JavaScript>
+        var name = decodeURI(document.URL);
+        name1 = name.slice(name.indexOf("+") + 1);
+        var num=name1.split(",");
+        var a = num[0];
+        var b = num[1];
+
+        function processForm(form) {
+            form.answer.value = "第一题选项数字成十为：" + a;
+            form.answer2.value = "第二题选项数字成十为：" + b;
+        }
+    </script>
+
+</body>
+</html>

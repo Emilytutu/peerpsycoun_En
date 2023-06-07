@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+    width: 60%;
+    border-collapse: collapse;
+	margin:auto;
+}
+
+table caption{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+th,td{
+    border: 1px solid #999;
+    text-align: center;
+    padding: 20px 0;
+}
+
+table thead tr{
+    background-color: #008c8c;
+    color: #fff;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #eee;
+}
+
+table tbody tr:hover{
+    background-color: #ccc;
+}
+
+table tbody tr td:first-child{
+    color: #f40;
+}
+
+table tfoot tr td{
+    text-align: right;
+    padding-right: 20px;
+}
+
+input{  
+	background:none;  
+	outline:none;  
+	border:0px;
+    padding:0;
+}
+		
+
+
+    </style>
+</head>
+
+
+<body>
+
+    <SCRIPT language=JavaScript>
+		window.alert(“问卷结果已加载完毕，点击呈现”);
+        function processForm(table){
+            var name = decodeURI(document.URL);
+            name1 = name.slice(name.indexOf("+") + 1);
+            var data = name1.split(",");
+
+            var qth = 0;
+            var qpz = 0;
+
+
+            var qth1 = 0;
+            var qpz1 = 0;
+
+
+            //均分
+            qth = data[0];
+            qpz = data[1];
+
+            //Z值
+            qth1 = data[2];
+            qpz1 = data[3];
+
+            document.getElementById("answer").value=qth;
+            document.getElementById("answer1").value=qth1;
+            
+            document.getElementById("answer3").value=qpz;
+            document.getElementById("answer4").value=qpz1;
+            
+
+
+            if (qth1 >= 1)
+            {
+                document.getElementById("answer2").value="有症状" ;
+                document.getElementById("answer2").style.color='red' ;
+            }
+            else
+                document.getElementById("answer2").value="无症状" ;
+
+                
+            if (qpz1 >= 1){
+                document.getElementById("answer5").style.color='red' ;
+                document.getElementById("answer5").value="有症状";
+            }
+            else
+                document.getElementById("answer5").value="无症状" ;
+        }
+            
+                
+    </SCRIPT>
+	
+	
+
+<input type="button" onclick="myFunction()" value="显示警告框">
+
+    <table>
+        <caption>诊断结果</caption>
+        <thead>
+            <tr>
+                <th>因子项</th>
+                <th>得分</th>
+                <th>均分</th>
+                <th>诊断参考</th>
+            </tr>
+        </thead>
+       <tbody>
+           <tr>
+               <td>躯体化</td>
+               <td>
+                   <input class="output" id="answer" size="1" style="width:50%;text-align: center">
+                </td>
+               <td>
+                    <input class="output" id="answer1" size="1" style="width:50%;text-align: center">
+               </td>
+               <td>
+                    <input class="output" id="answer2" size="1"  style="width:50%;text-align: center">
+               </td>
+           </tr>
+           <tr>
+            <td>强迫</td>
+            <td>
+                <input class="output" id="answer3" size="1" style="width:50%;text-align: center">
+            </td>
+            <td>
+                <input class="output" id="answer4" size="1" style="width:50%;text-align: center">
+            </td>
+            <td>
+                <input class="output" id="answer5" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>人际敏感</td>
+            <td>
+                <input class="output" name="answer6" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer7" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer8" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>抑郁</td>
+            <td>
+                <input class="output" name="answer9" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer10" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer11" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>焦虑</td>
+            <td>
+                <input class="output" name="answer12" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer13" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer14" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>敌对</td>
+            <td>
+                <input class="output" name="answer15" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer16" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer17" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>恐怖</td>
+            <td>
+                <input class="output" name="answer18" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer19" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer20" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>偏执</td>
+            <td>
+                <input class="output" name="answer21" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer22" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer23" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>精神病状</td>
+            <td>
+                <input class="output" name="answer24" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer25" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer26" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+           <tr>
+            <td>饮食睡眠</td>
+            <td>
+                <input class="output" name="answer27" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer28" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer29" size="1" style="width:50%;text-align: center">
+            </td>
+           </tr>
+       </tbody>
+       <tfoot>
+           <tr>
+               <td colspan="4">
+                   以上诊断结果仅供参考
+               </td>
+           </tr>
+       </tfoot>
+    </table>
+
+    <div class="aligncenter" >
+		
+		<input onclick=processForm(this.table) type="button" value="查看结果">
+	</div>
+
+    
+  
+   
+</body>
+</html>

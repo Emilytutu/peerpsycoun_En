@@ -1,0 +1,511 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<style>
+        table{
+    width: 60%;
+    border-collapse: collapse;
+	margin:auto;
+}
+
+table caption{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+th,td{
+    border: 1px solid #999;
+    text-align: center;
+    padding: 20px 0;
+}
+
+table thead tr{
+    background-color: #008c8c;
+    color: #fff;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #eee;
+}
+
+table tbody tr:hover{
+    background-color: #ccc;
+}
+
+table tbody tr td:first-child{
+    color: #f40;
+}
+
+table tfoot tr td{
+    text-align: right;
+    padding-right: 20px;
+}
+
+input{  
+	background:none;  
+	outline:none;  
+	border:0px;
+    padding:0;
+}
+
+.output{
+    width:100%;
+    text-align: center;
+}
+		
+a{text-decoration:none}
+		
+a:link {
+  color: orangered;
+}
+
+/* visited link */
+a:visited {
+  color: orangered;
+}
+
+/* mouse over link */
+a:hover {
+  color: green;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+		
+.anniu {
+  text-align: center;
+  width:100%;	
+	
+}
+		button{
+			width:150px;
+			height:50px;
+		}
+		
+
+
+    </style>
+<head>
+<meta charset="utf-8">
+<title>在线测评</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- css -->
+<link href="css/bootstrap-responsive.css"  rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">
+<!-- skin color -->
+<link href="color/default.css"  rel="stylesheet">
+</head>
+<body>
+	
+	<SCRIPT language=JavaScript>
+        function processForm(table) {
+            var name = decodeURI(document.URL);
+            name1 = name.slice(name.indexOf("+") + 1);
+            var data = name1.split(",");
+
+            //参考
+            var qth2 = "无症状";
+            var qpz2 = "无症状";
+            var rjmg2 = "无症状";
+            var yiyu2 = "无症状";
+            var jiaolv2 = "无症状";
+            var didui2 = "无症状";
+            var kongbu2 = "无症状";
+            var pz2 = "无症状";
+            var jsb2 = "无症状";
+
+
+            var qth = 0;
+            var qpz = 0;
+            var rjmg = 0;
+            var yiyu = 0;
+            var jiaolv = 0;
+            var didui = 0;
+            var kongbu = 0;
+            var pz = 0;
+            var jsb = 0;
+
+
+            var qth1 = 0;
+            var qpz1 = 0;
+            var rjmg1 = 0;
+            var yiyu1 = 0;
+            var jiaolv1 = 0;
+            var didui1 = 0;
+            var kongbu1 = 0;
+            var pz1 = 0;
+            var jsb1 = 0;
+
+
+            //均分
+            qth = data[0];
+            qpz = data[1];
+            rjmg = data[2];
+            yiyu = data[3];
+            jiaolv = data[4];
+            didui = data[5];
+            kongbu = data[6];
+            pz = data[7];
+            jsb = data[8];
+
+            //Z值
+            qth1 = data[9];
+            qpz1 = data[10];
+            rjmg1 = data[11];
+            yiyu1 = data[12];
+            jiaolv1 = data[13];
+            didui1 = data[14];
+            kongbu1 = data[15];
+            pz1 = data[16];
+            jsb1 = data[17];
+
+
+            document.getElementById("answer").value=qth;
+            document.getElementById("answer1").value=qth1;
+            
+            document.getElementById("answer3").value=qpz;
+            document.getElementById("answer4").value=qpz1;
+
+            document.getElementById("answer6").value=rjmg;
+            document.getElementById("answer7").value=rjmg1;
+
+            document.getElementById("answer9").value=yiyu;
+            document.getElementById("answer10").value=yiyu1;
+
+            document.getElementById("answer12").value=jiaolv;
+            document.getElementById("answer13").value=jiaolv1;
+
+            document.getElementById("answer15").value=didui;
+            document.getElementById("answer16").value=didui1;
+
+            document.getElementById("answer18").value=kongbu;
+            document.getElementById("answer19").value=kongbu1;
+
+            document.getElementById("answer21").value=pz;
+            document.getElementById("answer22").value=pz1;
+
+            document.getElementById("answer24").value=jsb;
+            document.getElementById("answer25").value=jsb1;
+
+
+
+            if (qth1 >= 1){
+                document.getElementById("answer2").value="有症状";
+                document.getElementById("answer2").style.color='red';
+            }
+            else
+                document.getElementById("answer2").value="无症状";
+                
+            if (qpz1 >= 1){
+                document.getElementById("answer5").value="有症状";
+                document.getElementById("answer5").style.color='red';
+            }
+            else
+                document.getElementById("answer5").value="无症状";
+                
+            if (rjmg1 >= 1){
+                document.getElementById("answer8").value="有症状";
+                document.getElementById("answer8").style.color='red';
+            }
+            else
+                document.getElementById("answer8").value="无症状";
+                
+            if (yiyu1 >= 1){
+                document.getElementById("answer11").value="有症状";
+                document.getElementById("answer11").style.color='red';
+            }
+            else
+                document.getElementById("answer11").value="无症状";
+                
+            if (jiaolv1 >= 1){
+                document.getElementById("answer14").value="有症状";
+                document.getElementById("answer14").style.color='red';
+            }
+            else
+                document.getElementById("answer14").value="无症状";
+                
+            if (didui1 >= 1){
+                document.getElementById("answer17").value="有症状";
+                document.getElementById("answer17").style.color='red';
+            }
+            else
+                document.getElementById("answer17").value="无症状";
+                
+            if (kongbu1 >= 1){
+                document.getElementById("answer20").value="有症状";
+                document.getElementById("answer20").style.color='red';
+            }
+            else
+                document.getElementById("answer20").value="无症状";
+                
+            if (pz1 >= 1){
+                document.getElementById("answer23").value="有症状";
+                document.getElementById("answer23").style.color='red';
+            }
+            else
+                document.getElementById("answer23").value="无症状";
+                
+            if (jsb1 >= 1){
+                document.getElementById("answer26").value="有症状";
+                document.getElementById("answer26").style.color='red';
+            }
+            else
+                document.getElementById("answer26").value="无症状";
+                
+
+        }
+    </SCRIPT>
+<!-- navbar -->
+<div class="navbar-wrapper">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<!-- Responsive navbar -->
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</a>
+				<h1 class="brand"><a href="index.html" >朋辈心理咨询服务平台</a></h1>
+				<!-- navigation -->
+				<nav class="pull-right nav-collapse collapse">
+				<ul id="menu-main" class="nav">
+					<li><a title="team" href="index.html">首页</a></li>
+					<li><a title="services" href="Question1.html">心理测评</a></li>
+					<li><a title="works" href="consult.html">在线咨询</a></li>
+					<li><a title="blog" href="weike.html">心理微课</a></li>
+					<li><a title="contact" href="Kepu.html">科普知识</a></li>
+					<li><a href="Login/login.html">登录</a></li>
+				</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- spacer section -->
+<section class="spacer green">
+<div class="container">
+	<div class="row">
+		<div class="span12 aligncenter flyUp">
+			<h2 class="pagetitle"><strong>在线测评系统</strong></h2>
+		</div>
+	</div>
+</div>
+</section>
+
+
+<section id="blog" class="section">
+	<div class="container">
+		
+		<div class="introduce" style=" width:600px;margin:0 auto;">
+	
+		  <div>
+			<h2>您好&nbsp;</h2>
+			
+			  <p>您的结果系统已处理好您的测评结果，请点击下方按钮以显示结果。</p>
+          </div>
+			
+		</div>
+		
+		<div class="anniu">
+			<button onclick=processForm(this.table)>点我查看结果</button>
+		</div>
+		<p>&nbsp;</p>
+		
+		 <table>
+        <caption>SCL_90 诊断结果表</caption>
+		
+        <thead>
+            <tr>
+                <th>因子项</th>
+                <th>因子分</th>
+                <th>Z值</th>
+                <th>诊断参考</th>
+            </tr>
+        </thead>
+       <tbody>
+           <tr>
+               <td><a href="Questions/SQL-90建议/advice 躯体化.html">躯体化</a></td>
+               <td>
+                   <input class="output" id="answer" size="1">
+                </td>
+               <td>
+                    <input class="output" id="answer1" size="1">
+               </td>
+               <td>
+                    <input class="output" id="answer2" size="1">
+               </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 强迫.html">强迫</a></td>
+            <td>
+                <input class="output" id="answer3" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer4" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer5" size="1" >
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 人际关系敏感.html">人际敏感</a></td>
+            <td>
+                <input class="output" id="answer6" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer7" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer8" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 抑郁.html">抑郁</a></td>
+            <td>
+                <input class="output" id="answer9" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer10" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer11" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 焦虑.html">焦虑</a></td>
+            <td>
+                <input class="output" id="answer12" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer13" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer14" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 敌对.html">敌对</a></td>
+            <td>
+                <input class="output" id="answer15" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer16" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer17" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 恐怖.html">恐怖</a></td>
+            <td>
+                <input class="output" id="answer18" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer19" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer20" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 偏执.html">偏执</a></td>
+            <td>
+                <input class="output" id="answer21" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer22" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer23" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td><a href="Questions/SQL-90建议/advice 精神病性.html">精神病状</a></td>
+            <td>
+                <input class="output" id="answer24" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer25" size="1">
+            </td>
+            <td>
+                <input class="output" id="answer26" size="1">
+            </td>
+           </tr>
+
+       </tbody>
+       <tfoot>
+           <tr>
+               <td colspan="4">
+                   以上诊断结果仅供参考
+				   
+               </td>
+			   
+           </tr>
+
+       </tfoot>
+    </table>
+		
+		<div class="introduce" style=" width:600px;margin:0 auto;">
+	<p>&nbsp; &nbsp;</p>
+		  <div>
+			<p><strong>说明：</strong></p>
+			<p>&nbsp; &nbsp; &nbsp; &nbsp;SCL-90包括9个主要因子，每一个因子反映出病人的某方面症状痛苦情况，通过因子分可了解症状分布特点。<strong>因子分</strong>将展示该类所以均分，<strong>Z值</strong>表示您的分数与全国大学生常模比较后的结果，Z值小于1表示该类正常，大于1则说明该类有些许异常，建议点击查看建议。</p>
+			  <p>&nbsp; &nbsp; &nbsp; &nbsp;您可以通过<strong>点击对应的因子项名称</strong>查看详情和建议,祝您生活愉快！</p>
+          </div>
+			<p>&nbsp;</p>
+		</div>
+
+		</div>
+		<div class="blankdivider30"></div>
+	
+
+	</section>
+
+
+
+
+	
+
+<footer>
+<div class="container">
+	<div class="row">
+		<div class="span6 offset3">
+			<p class="copyright">
+				&copy; 2022 peerpsycoun.com. All rights reserved.
+			</p>
+		</div>
+	</div>
+</div>
+<!-- ./container -->
+</footer>
+<a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+<!-- jQuery -->
+<script src="js/jquery.js" ></script>
+<!-- nav -->
+<script src="js/jquery.scrollTo.js"></script>
+<script src="js/jquery.nav.js" ></script>
+<!-- localScroll -->
+<script src="js/jquery.localscroll-1.2.7-min.js" ></script>
+<!-- bootstrap -->
+<script src="js/bootstrap.js" ></script>
+<!-- prettyPhoto -->
+<script src="js/jquery.prettyPhoto.js" ></script>
+<!-- Works scripts -->
+<script src="js/isotope.js" ></script>
+<!-- flexslider -->
+<script src="js/jquery.flexslider.js" ></script>
+<!-- inview -->
+<script src="js/inview.js"></script>
+<!-- animation -->
+<script src="js/animate.js" ></script>
+<!-- twitter -->
+<script src="js/jquery.tweet.js" ></script>
+<!-- contact form -->
+<script src="js/validate.js" ></script>
+<!-- custom functions -->
+<script src="js/custom.js" ></script>
+</body>
+</html>

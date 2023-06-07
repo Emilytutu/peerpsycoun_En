@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+th,td{
+    border: 1px solid #999;
+    text-align: center;
+    padding: 20px 0;
+}
+
+table thead tr{
+    background-color: #008c8c;
+    color: #fff;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #eee;
+}
+
+table tbody tr:hover{
+    background-color: #ccc;
+}
+
+table tbody tr td:first-child{
+    color: #f40;
+}
+
+table tfoot tr td{
+    text-align: right;
+    padding-right: 20px;
+}
+
+input{  
+	background:none;  
+	outline:none;  
+	border:0px;
+    padding:0;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>诊断结果</caption>
+        <thead>
+            <tr>
+                <th>因子项</th>
+                <th>得分</th>
+                <th>均分</th>
+                <th>诊断参考</th>
+            </tr>
+        </thead>
+       <tbody>
+           <tr>
+               <td>躯体化</td>
+               <td>
+                   <input class="output" name="answer" size="1">
+                </td>
+               <td>
+                    <input class="output" name="answer1" size="1">
+               </td>
+               <td>
+                    <input class="output" name="answer2" size="1">
+               </td>
+           </tr>
+           <tr>
+            <td>强迫</td>
+            <td>
+                <input class="output" name="answer3" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer4" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer5" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>人际敏感</td>
+            <td>
+                <input class="output" name="answer6" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer7" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer8" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>抑郁</td>
+            <td>
+                <input class="output" name="answer9" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer10" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer11" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>焦虑</td>
+            <td>
+                <input class="output" name="answer12" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer13" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer14" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>敌对</td>
+            <td>
+                <input class="output" name="answer15" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer16" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer17" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>恐怖</td>
+            <td>
+                <input class="output" name="answer18" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer19" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer20" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>偏执</td>
+            <td>
+                <input class="output" name="answer21" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer22" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer23" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>精神病状</td>
+            <td>
+                <input class="output" name="answer24" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer25" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer26" size="1">
+            </td>
+           </tr>
+           <tr>
+            <td>饮食睡眠</td>
+            <td>
+                <input class="output" name="answer27" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer28" size="1">
+            </td>
+            <td>
+                <input class="output" name="answer29" size="1">
+            </td>
+           </tr>
+       </tbody>
+       <tfoot>
+           <tr>
+               <td colspan="4">
+                   以上诊断结果仅供参考
+               </td>
+           </tr>
+       </tfoot>
+    </table>
+
+    <INPUT style="FONT-SIZE: 11pt;   FONT-FAMILY: 微软雅黑" onclick=processForm() type=button
+        value=查看结果>&nbsp;<br /><br /> 
+        
+        
+        <SCRIPT language=JavaScript>
+         var name = decodeURI(document.URL);
+        name1 = name.slice(name.indexOf("+") + 1);
+        var num=name1.split(",");
+        var num0 = num[0];
+        var num1 = num[1];
+        var num2 = num[2];
+        var num3 = num[3];
+        var num4 = num[4];
+        var num5 = num[5];
+        var num6 = num[6];
+        var num7 = num[7];
+        var num8 = num[8];
+        var num9 = num[9];
+        var num10 = num[10];
+        var num11 = num[11];
+        var num12 = num[12];
+        var num13 = num[13];
+        var num14 = num[14];
+        var num15 = num[15];
+        var num16 = num[16];
+        var num17 = num[17];
+        var num18 = num[18];
+        var num19 = num[19];
+        var num20 = num[20];
+        var num21 = num[21];
+        var num22 = num[22];
+        var num23 = num[23];
+        var num24 = num[24];
+        var num25 = num[25];
+        var num26 = num[26];
+        var num27 = num[27];
+        var num28 = num[28];
+        var num29 = num[29];
+        var num30 = num[30];
+        var num31 = num[31];
+        var num32 = num[32];
+        var num33 = num[33];
+        var num34 = num[34];
+        var num35 = num[35];
+        var num36 = num[36];
+        var num37 = num[37];
+        var num38 = num[38];
+        var num39 = num[39];
+        var num40 = num[40];
+        var num41 = num[41];
+        var num42 = num[42];
+        var num43 = num[43];
+        var num44 = num[44];
+        var num45 = num[45];
+        var num46 = num[46];
+        var num47 = num[47];
+        var num48 = num[48];
+        var num49 = num[49];
+        var num50 = num[50];
+        var num51 = num[51];
+        var num52 = num[52];
+        var num53 = num[53];
+        var num54 = num[54];
+        var num55 = num[55];
+        var num56 = num[56];
+        var num57 = num[57];
+        var num58 = num[58];
+        var num59 = num[59];
+        var num60 = num[60];
+        var num61 = num[61];
+        var num62 = num[62];
+        var num63 = num[63];
+        var num64 = num[64];
+        var num65 = num[65];
+        var num66 = num[66];
+        var num67 = num[67];
+        var num68 = num[68];
+        var num69 = num[69];
+        var num70 = num[70];
+        var num71 = num[71];
+        var num72 = num[72];
+        var num73 = num[73];
+        var num74 = num[74];
+        var num75 = num[75];
+        var num76 = num[76];
+        var num77 = num[77];
+        var num78 = num[78];
+        var num79 = num[79];
+        var num80 = num[80];
+        var num81 = num[81];
+        var num82 = num[82];
+        var num83 = num[83];
+        var num84 = num[84];
+        var num85 = num[85];
+        var num86 = num[86];
+        var num87 = num[87];
+        var num88 = num[88];
+        var num89 = num[89];
+        function processForm(form) {
+            var xf = xf1 = 0;
+            var qth = 0;
+            var qpz = 0;
+            var rjmg = 0;
+            var yiyu = 0;
+            var jiaolv = 0;
+            var didui = 0;
+            var kongbu = 0;
+            var pz = 0;
+            var jsb = 0;
+            var qita = 0;
+            num = new Array(90);
+
+            var qth1 = 0;
+            var qpz1 = 0;
+            var rjmg1 = 0;
+            var yiyu1 = 0;
+            var jiaolv1 = 0;
+            var didui1 = 0;
+            var kongbu1 = 0;
+            var pz1 = 0;
+            var jsb1 = 0;
+            var qita1 = 0;
+            
+            var qth2 = "无症状";
+            var qpz2 = "无症状";
+            var rjmg2 = "无症状";
+            var yiyu2 = "无症状";
+            var jiaolv2 = "无症状";
+            var didui2 = "无症状";
+            var kongbu2 = "无症状";
+            var pz2 = "无症状";
+            var jsb2 = "无症状";
+            var qita2 = "无症状";
+
+            qth += num0 + num3 + num11 + num26 + num39 + num41 + num47 + num48 + num51 + num52 + num55 + num57;
+            qpz += num2 + num8 + num9 + num27 + num37 + num44 + num45 + num50 + num54 + num64;
+            rjmg += num5 + num20 + num33 + num35 + num36 + num40 + num60 + num68 + num72;
+            yiyu += num4 + num13 + num14 + num19 + num21 + num25 + num28 + num29 + num30 + num31 + num53 + num70 + num78;
+            jiaolv += num1 + num16 + num22 + num32 + num38 + num56 + num71 + num78 + num79 + num85;
+            didui += num10 + num23 + num62 + num66 + num73 + num80;
+            kongbu += num12 + num24 + num46 + num49 + num69 + num74 + num81;
+            pz += num7 + num17 + num42 + num67 + num75 + num82;
+            jsb += num6 + num15 + num34 + num61 + num77 + num83 + num84 + num86 + num87 + num89;
+            qita += num18 + num43 + num58 + num59 + num63 + num65 + num88;
+
+            qth1 = (((qth / 12) - 1.45)/0.49);
+            qpz1 = ((qpz / 10) - 1.98 )/0.63;
+            rjmg1 = ((rjmg / 9)- 1.88)/0.63;
+            yiyu1 = ((yiyu / 13)- 1.74)/0.62;
+            jiaolv1 = ((jiaolv / 10)- 1.61)/0.55;
+            didui1 = ((didui / 6)- 1.61)/0.62;
+            kongbu1 = ((kongbu / 7) - 1.38)/0.49;
+            pz1 = ((pz / 6)-1.72)/0.62;
+            jsb1 = ((jsb / 10)-0.59)/0.54;
+            qita1 = (qita / 7);
+
+            qth1 = qth1.toFixed(2);
+            qpz1 = qpz1.toFixed(2);
+            rjmg1 = rjmg1.toFixed(2);
+            yiyu1 = yiyu1.toFixed(2);
+            jiaolv1 = jiaolv1.toFixed(2);
+            didui1 = didui1.toFixed(2);
+            kongbu1 = kongbu1.toFixed(2);
+            pz1 = pz1.toFixed(2);
+            jsb1 = jsb1.toFixed(2);
+            
+
+            
+            qth1 = Math.round(qth1);
+            qpz1 = Math.round(qpz1);
+            rjmg1 = Math.round(rjmg1);
+            yiyu1 = Math.round(yiyu1);
+            jiaolv1 = Math.round(jiaolv1);
+            didui1 = Math.round(didui1);
+            kongbu1 = Math.round(kongbu1);
+            pz1 = Math.round(pz1);
+            jsb1 = Math.round(jsb1);
+            qita1 = Math.round(qita1);
+
+            if(qth1>=1)
+            qth2="有症状";
+            if(qpz1>=1)
+            qpz1="有症状";
+            if(rjmg1>=1)
+            rjmg2="有症状";
+            if(yiyu1>=1)
+            yiyu2="有症状";
+            if(jiaolv1>=1)
+            jiaolv2="有症状";
+            if(didui1>=1)
+            didui2="有症状";
+            if(kongbu1>=1)
+            kongbu2="有症状";
+            if(pz1>=1)
+            pz2="有症状";
+            if(jsb1>=1)
+            jsb2="有症状";
+            if(qth1>=1)
+            qita2="有症状";
+            
+
+            // for (i = roll_call; i > 0; i--) { xf += hc[i - 1] };
+            // xf1 = Math.ceil(xf * 1.25);
+            // xf2 = Math.ceil(xf);
+            // xf3 = (xf / 90);
+            // xf3 = Math.round(xf3);
+
+            form.answer.value = qth;
+            form.answer1.value = qth1;
+            form.answer2.value = qth2;
+
+            form.answer3.value = qpz;
+            form.answer4.value = qpz1;
+            form.answer5.value = qpz2;
+
+            form.answer6.value = rjmg;
+            form.answer7.value = rjmg1;
+            form.answer8.value = rjmg2;
+
+            form.answer9.value = yiyu;
+            form.answer10.value = yiyu1;
+            form.answer11.value = yiyu2;
+
+            form.answer12.value = jiaolv;
+            form.answer13.value = jiaolv1;
+            form.answer14.value = jiaolv2;
+
+            form.answer15.value = didui;
+            form.answer16.value = didui1;
+            form.answer17.value = didui2;
+
+            form.answer18.value = kongbu;
+            form.answer19.value = kongbu1;
+            form.answer20.value = kongbu2;
+
+            form.answer21.value = pz;
+            form.answer22.value = pz1;
+            form.answer23.value = pz2;
+
+            form.answer24.value = jsb;
+            form.answer25.value = jsb1;
+            form.answer26.value = jsb2;
+
+            form.answer27.value = qita;
+            form.answer28.value = qita1;
+            form.answer29.value = qita2;
+            // form.answer2.value = "躯体化分" + qth + "分" + "均分" + qth1;
+            // form.answer3.value = "强迫症状" + qpz + "分" + "均分" + qpz1;
+            // form.answer4.value = "人际敏感" + rjmg + "分" + "均分" + rjmg1;
+            // form.answer5.value = "抑郁症状" + yiyu + "分" + "均分" + yiyu1;
+            // form.answer6.value = "焦虑症状" + jiaolv + "分" + "均分" + jiaolv1;
+            // form.answer7.value = "敌对症状" + didui + "分" + "均分" + didui1;
+            // form.answer8.value = "恐怖症状" + kongbu + "分" + "均分" + kongbu1;
+            // form.answer9.value = "偏执症状" + pz + "分" + "均分" + pz1;
+            // form.answer10.value = "精神症状" + jsb + "分" + "均分" + jsb1;
+            // form.answer11.value = "饮食睡眠" + qita + "分" + "均分" + qita1; 
+          
+
+        }</SCRIPT>
+   
+</body>
+</html>

@@ -11,7 +11,7 @@
     $culture = $_POST['culture'];
     $income = $_POST['income'];
     if ($password == ''){
-      echo '<script>alert("请确认密码");</script>';
+      echo '<script>alert("Please confirm your password");</script>';
       exit(0);
     }
     $userName='django';
@@ -20,7 +20,7 @@
     $dataBase='django';
     $conn=mysqli_connect($host,$userName,$passWord,$dataBase);
     if ($conn->connect_error){
-        echo '数据库连接失败！';
+        echo 'Fail to connect database！';
         exit(0);
     }else {
         $tbname='regist';
@@ -30,10 +30,10 @@
          
           $res_insert = $conn->query($sql_insert);
           if($res_insert) {
-            echo "<script>alert('提交成功！');location='login.html';</script>";
+            echo "<script>alert('Submission done！');location='login.html';</script>";
           } 
           else{
-              echo "<script>alert('出现错误');location='regist2.html';</script>";
+              echo "<script>alert('There's something wrong...');location='regist2.html';</script>";
           }
     }
 ?>

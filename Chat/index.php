@@ -9,37 +9,37 @@
 <body>
   <div class="wrapper">
     <section class="form signup">
-      <header>朋辈心理咨询</header>
+      <header>All for Friends: Your Psychological Counselor</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="name-details">
           <div class="field input">
-            <label>姓</label>
+            <label>Last name</label>
             <input type="text" name="fname" placeholder="First name" required>
           </div>
           <div class="field input">
-            <label>名</label>
+            <label>First name</label>
             <input type="text" name="lname" placeholder="Last name" required>
           </div>
         </div>
         <div class="field input">
-          <label>邮箱</label>
-          <input type="text" name="email" placeholder="邮箱" required>
+          <label>E-mail</label>
+          <input type="text" name="email" placeholder="E-mail" required>
         </div>
         <div class="field input">
-          <label>密码</label>
-          <input type="password" name="password" placeholder="密码" required>
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Password" required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field image">
-          <label>上传头像</label>
+          <label>Upload an avatar</label>
           <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="点击注册">
+          <input type="submit" name="submit" value="Create an account">
         </div>
       </form>
-      <div class="link">已经注册? <a href="login.php">点击登录</a></div>
+      <div class="link">Already a user? <a href="login.php">Log in</a></div>
     </section>
   </div>
 

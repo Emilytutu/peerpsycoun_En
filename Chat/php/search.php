@@ -11,7 +11,7 @@
     if(mysqli_num_rows($query) > 0){
         include_once "data.php";
     }else{
-        $output .= '没有搜索结果😞';
+        $output .= 'Found absolutely nothing. Maybe try again?😞';
     }
     echo $output;
 ?>

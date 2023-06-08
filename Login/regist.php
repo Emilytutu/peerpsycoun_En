@@ -11,15 +11,15 @@
     // $culture = $_POST['culture'];
     // $income = $_POST['income'];
     if ($username == ''){
-      echo '<script>alert("请输入用户名");</script>';
+      echo '<script>alert("Enter your username");</script>';
       exit(0);
     }
     if ($password == ''){
-      echo '<script>alert("请输入密码");</script>';
+      echo '<script>alert("Enter your password");</script>';
       exit(0);
     }
     if ($password != $repassword){
-      echo '<script>alert("两次密码输入不一致");</script>';
+      echo '<script>alert("The two passwords you entered were inconsistent");</script>';
       exit(0);
     }
     if($password == $repassword){
@@ -29,7 +29,7 @@
         $dataBase='django';
         $conn=mysqli_connect($host,$userName,$passWord,$dataBase);
       if ($conn->connect_error){
-        echo '数据库连接失败！';
+        echo 'Fail to connect database！';
         exit(0);
       }else {
           $tbname='regist';
@@ -37,10 +37,10 @@
           $sql_insert = "insert into {$tbname} (username,password,telephone,email) values('$username','$password','$telephone','$email')";
           $res_insert = $conn->query($sql_insert);
           if($res_insert) {
-            echo "<script>alert('注册成功！');location='register2.html';</script>";
+            echo "<script>alert('You have successfully registered！');location='register2.html';</script>";
           } 
         }
     }else{
-      echo "<script>alert('提交未成功');location='register.html'; </script>";
+      echo "<script>alert('Fail to submit your information, please try again');location='register.html'; </script>";
     }
 ?>

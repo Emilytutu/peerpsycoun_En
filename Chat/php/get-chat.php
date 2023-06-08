@@ -27,7 +27,7 @@
                 }
             }
         }else{
-            $output .= '<div class="text">发送消息聊天，即可看到信息😎</div>';
+            $output .= '<div class="text">The messages sent would be shown here😎</div>';
         }
         echo $output;
     }else{

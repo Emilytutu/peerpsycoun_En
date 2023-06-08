@@ -10,21 +10,21 @@
             $user_pass = md5($password);
             $enc_pass = $row['password'];
             if($user_pass === $enc_pass){
-                $status = "在线😊";
+                $status = "Online😊";
                 $sql2 = mysqli_query($conn, "UPDATE users SET status = '{$status}' WHERE unique_id = {$row['unique_id']}");
                 if($sql2){
                     $_SESSION['unique_id'] = $row['unique_id'];
                     echo "success";
                 }else{
-                    echo "请再试一次";
+                    echo "please try again";
                 }
             }else{
-                echo "邮箱或密码错误😭";
+                echo "Oops! Incorrect e-mail or password. Please try again😭";
             }
         }else{
-            echo "$email - 未注册";
+            echo "$email - Invalid e-mail. Please register first";
         }
     }else{
-        echo "请将信息填写完整😊";
+        echo "Please fill all your information😊";
     }
 ?>

@@ -6,7 +6,7 @@
     $query = mysqli_query($conn, $sql);
     $output = "";
     if(mysqli_num_rows($query) == 0){
-        $output .= "好像没人😥";
+        $output .= "Seems that nobody else is here😥";
     }elseif(mysqli_num_rows($query) > 0){
         include_once "data.php";
     }

@@ -7,7 +7,7 @@ $dataBase='django';
 $conn=mysqli_connect($host,$userName,$passWord,$dataBase);
 if (mysqli_connect_errno()) 
 { 
-    echo "连接 MySQL 失败: " . mysqli_connect_error(); 
+    echo "Fail to connect MySQL: " . mysqli_connect_error(); 
 } 
  
 //从登录页接受来的数据
@@ -23,10 +23,10 @@ if (!$result) {
 $row=mysqli_num_rows($result);
 if(!$row)
     {
-        echo "<script>alert('密码错误，请重新输入');location='login.html'</script>";
+        echo "<script>alert('Wrong Password. Please try again');location='login.html'</script>";
 //  location='index.html'
     }
     else{
         
-        echo "<script>alert('登录成功');location='http://www.peerpsycoun.com/index.html'</script>";
+        echo "<script>alert('You have successfully logged in!');location='http://www.peerpsycoun.com/index.html'</script>";
     };

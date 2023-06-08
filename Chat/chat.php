@@ -31,7 +31,7 @@
       </div>
       <form action="#" class="typing-area">
         <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
-        <input type="text" name="message" class="input-field" placeholder="输入框..." autocomplete="off">
+        <input type="text" name="message" class="input-field" placeholder="Input box..." autocomplete="off">
         <button><i class="fab fa-telegram-plane"></i></button>
       </form>
     </section>

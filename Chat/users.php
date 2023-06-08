@@ -23,11 +23,11 @@
             <p><?php echo $row['status']; ?></p>
           </div>
         </div>
-        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">退出登录</a>
+        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">Log Out</a>
       </header>
       <div class="search">
-        <span class="text">搜索框🤖</span>
-        <input type="text" placeholder="输入用户名搜索...">
+        <span class="text">Search Box🤖</span>
+        <input type="text" placeholder="Enter username to search...">
         <button><i class="fas fa-search"></i></button>
       </div>
       <div class="users-list">

@@ -9,23 +9,23 @@
 <body>
   <div class="wrapper">
     <section class="form login">
-      <header>朋辈心理咨询</header>
+      <header>All for Friends: Your Psychological Counselor</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="field input">
-          <label>邮箱</label>
-          <input type="text" name="email" placeholder="输入邮箱" required>
+          <label>E-mail</label>
+          <input type="text" name="email" placeholder="Your e-mail address" required>
         </div>
         <div class="field input">
-          <label>密码</label>
-          <input type="password" name="password" placeholder="输入密码" required>
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Your password" required>
           <i class="fas fa-eye"></i>
         </div>
         <div class="field button">
-          <input type="submit" name="submit" value="点击登录">
+          <input type="submit" name="submit" value="Log In">
         </div>
       </form>
-      <div class="link">没有账号? <a href="index.php">点击注册</a></div>
+      <div class="link">First time user? <a href="index.php">Create an account</a></div>
     </section>
   </div>
   

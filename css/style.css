@@ -288,10 +288,10 @@ h2.pagetitle {
 .navbar .brand a {
 	padding: 0;
 	color: #fff;
-	font-size: 1.75em;
+	font-size: 1.05em;
 	margin-left: 0;
 	font-weight: 400;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 .navbar .brand a:hover {
 	text-decoration: none;
@@ -319,7 +319,7 @@ ul#menu-main > li > a {
 	font-weight: 600;
 	color: #fff;
 	font-size:14px;
-	text-transform:uppercase;
+	/*text-transform:uppercase;*/
 }
 ul#menu-main > li > a:hover {
 	padding: 9px 15px;
@@ -381,8 +381,8 @@ header .logo {
 }
 
 #main-flexslider ul.slides li p {
-	font-size: 72px;
-	text-transform: uppercase;
+	font-size: 15px;
+	/*text-transform: uppercase;*/
 	position: relative;
 	margin-bottom: 0px;
 	text-align: center;
